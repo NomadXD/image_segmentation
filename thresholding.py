@@ -25,8 +25,8 @@ gray = cv2.cvtColor(shifted, cv2.COLOR_BGR2GRAY)
 thresh = cv2.threshold(gray, 0, 255,
 	cv2.THRESH_BINARY |cv2.THRESH_OTSU)[1]
 
-#thresh2 = cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY,11,2)
-#thresh3 = cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,11,2)
+#thresh = cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY,11,2)
+#th3 = cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,11,2)
 cv2.imshow("Thresh", thresh)
 
 # find contours in the thresholded image
@@ -45,6 +45,7 @@ for (i, c) in enumerate(cnts):
  
 # show the output image
 cv2.imshow("Image", resized)
+
 
 
 
